@@ -43,13 +43,6 @@ If `mail_config.php` is left unchanged, the reset page opens directly after a re
 
 ## Project structure
 
-Authentication
-- `login.php`: log in (graduates and administrators use the same page)
-- `register.php`: create a graduate account
-- `logout.php`: end the session
-- `auth.php`: blocks pages for users who are not logged in
-- `admin_auth.php`: blocks administrator pages for non-administrators
-
 Password reset
 - `reset_password.php`: request a reset link by email
 - `reset_confirm.php`: choose a new password from the link
