@@ -23,6 +23,9 @@ if (!$user) {
 <?php include "navbar.php"; ?>
 <div class="container">
     <?php include "message.php"; ?>
+	    <div class="breadcrumb">
+        <a href="index.php">Home</a><span>/</span>Profile
+    </div>
     <div class="profile-box">
         <div class="profile-avatar"><?php echo h(mb_strtoupper(mb_substr($user['name'], 0, 1))); ?></div>
         <h2>My Profile</h2>

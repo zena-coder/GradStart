@@ -26,6 +26,9 @@ $results = fetch_all($conn, "SELECT o.* FROM opportunity o JOIN bookmark b ON o.
 <?php include "navbar.php"; ?>
 <div class="container">
     <?php include "message.php"; ?>
+	    <div class="breadcrumb">
+        <a href="index.php">Home</a><span>/</span>Saved Opportunities
+    </div>
     <h2>My Saved Opportunities</h2>
     <?php if (count($results) == 0) { ?>
         <div class="empty-state">

@@ -60,6 +60,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <?php include "navbar.php"; ?>
 <div class="container">
+     <div class="breadcrumb">
+        <a href="index.php">Home</a><span>/</span><a href="profile.php">Profile</a><span>/</span>Change Password
+    </div>
     <div class="form-box">
         <h2>Change Password</h2>
         <?php if ($error != "") { ?>

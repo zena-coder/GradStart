@@ -38,8 +38,8 @@ $skills = array_filter(array_map('trim', explode(",", $opp['skills_to_be_acquire
 <?php include "navbar.php"; ?>
 <div class="container">
     <?php include "message.php"; ?>
-    <div class="links" style="text-align:left;margin-bottom:20px;">
-        <a href="index.php">&larr; Back to opportunities</a>
+        <div class="breadcrumb">
+        <a href="index.php">Home</a><span>/</span>Opportunity Details
     </div>
     <div class="detail-box">
         <h2><?php echo h($opp['title']); ?></h2>
