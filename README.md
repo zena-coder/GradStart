@@ -17,25 +17,28 @@ Graduate:
 
 ## Administrator role
 
-GradStart has a second role, the administrator, who manages the opportunities shown to graduates. The administrator adds new opportunities, edits existing ones, and deletes those that are no longer available, and graduates see these changes immediately. The administrator account is created by `schema.sql` together with the sample opportunities. The administrator pages are not included in this release, so only graduate accounts can be used for now.
+GradStart has a second role, the administrator, who manages the opportunities shown to graduates. The administrator adds new opportunities, edits existing ones, and deletes those that are no longer available, and graduates see these changes immediately. The administrator account is created by `schema.sql` together with the sample opportunities. The administrator pages are not included in this sprint, so only graduate accounts can be used for now.
 
 ## Technologies
 
-PHP 8, MySQL (MariaDB), HTML, CSS, JavaScript, PHPMailer
+PHP 8, MySQL, HTML, CSS, JavaScript, PHPMailer
 
 ## How to run
 
 1. Install XAMPP or MAMP and start Apache and MySQL.
 2. Copy the project files into a folder named `gradstart` inside `htdocs`.
 3. Open phpMyAdmin, go to Import, choose `schema.sql`, and run it. This creates the `gradstart` database with all tables and sample data.
-4. If your MySQL root password is not empty (MAMP uses `root`), change it in `config.php` in the line that starts with `$conn = @mysqli_connect`.
+4. If your MySQL root password is empty like XAMPP (MAMP uses `root`), change it in `config.php` in the line that starts with `$conn = @mysqli_connect`.
 5. Open `http://localhost/gradstart/login.php` (use `http://localhost:8888/gradstart/login.php` if your server uses port 8888).
 
 ## Accounts
 
 - Graduate: create one from the Register page
-
-## Password reset email (optional)
+- Admin:
+   email : admin@gradstart.com
+   password : Admin@123
+  
+## Password reset email
 
 Reset links are sent by email through Gmail SMTP. To enable it, open `mail_config.php` and set `SMTP_USER` to a Gmail address and `SMTP_PASS` to a Google App Password (Google Account > Security > 2-Step Verification > App passwords).
 
