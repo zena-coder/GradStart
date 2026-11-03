@@ -1,6 +1,6 @@
 # GradStart
 
-GradStart is a web application that helps graduates and students find training and co-op opportunities in one place. Graduates can browse, search, filter by skills, view details, and bookmark opportunities.
+GradStart is a web application that helps graduates and students find training and co-op opportunities in one place. Graduates can browse, search, filter by skills, view details, and bookmark opportunities. Administrators can add, edit, and delete opportunities.
 
 Course: IT320 Practical Software Engineering, Section 76361, Group 3 (King Saud University)
 
@@ -15,9 +15,13 @@ Graduate:
 - Bookmark opportunities and view saved ones
 - View the profile (name and email) and change the password
 
-## Administrator role
-
-GradStart has a second role, the administrator, who manages the opportunities shown to graduates. The administrator adds new opportunities, edits existing ones, and deletes those that are no longer available, and graduates see these changes immediately. The administrator account is created by `schema.sql` together with the sample opportunities. The administrator pages are not included in this sprint, so only graduate accounts can be used for now.
+Administrator:
+- Log in with the same login page and be redirected to the dashboard
+- View all opportunities in the dashboard
+- Add a new opportunity (with validation of the required fields, the deadline, and the application link or email)
+- Edit an existing opportunity
+- Delete an opportunity after a confirmation message (its bookmarks are removed as well)
+- View the profile (name and email) and change the password
 
 ## Technologies
 
@@ -64,8 +68,16 @@ Graduate pages
 - `profile.php`: name and email of the graduate
 - `change_password.php`: change the password
 
+Administrator pages
+- `admin_auth.php`: allows only administrators to open the administrator pages
+- `admin_dashboard.php`: list of opportunities with edit and delete
+- `admin_add_edit.php`: add or edit an opportunity
+- `admin_delete.php`: delete an opportunity
+- `admin_profile.php`: name and email of the administrator
+- `admin_change_password.php`: change the password
+
 Shared parts
-- `navbar.php`, `footer.php`, `message.php`: reusable page sections and status messages
+- `navbar.php`,  `admin_navbar.php`, `footer.php`, `message.php`: reusable page sections and status messages
 - `config.php`: database connection and helper functions
 
 Database
